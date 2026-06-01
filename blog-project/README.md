@@ -25,23 +25,48 @@ A simple blog application built with **Laravel**, **Laravel Breeze** (Blade + Al
 ```bash
 git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git
 cd <YOUR_REPO>
-2) Create your environment file
+```
+### 2) Create your environment file
+```bash
 cp .env.example .env
-3) Install PHP dependencies (Composer) using a temporary container
+```
+### 3) Install PHP dependencies (Composer) using a temporary container
+```bash
 docker run --rm \
   -u "$(id -u):$(id -g)" \
   -v "$(pwd):/var/www/html" \
   -w /var/www/html \
   laravelsail/php84-composer:latest \
   composer install
-4) Start Sail (Docker containers)
+  ```
+### 4) Start Sail (Docker containers)
+```bash
 ./vendor/bin/sail up -d
-5) Generate the application key
+  ```
+### 5) Generate the application key
+```bash
 ./vendor/bin/sail artisan key:generate
-6) Run database migrations
+  ```
+### 6) Run database migrations
+```bash
 ./vendor/bin/sail artisan migrate
-7) Install frontend dependencies and build assets
+  ```
+### 7) Install frontend dependencies and build assets
+```bash
 ./vendor/bin/sail npm install
 ./vendor/bin/sail npm run build
-8) Open the app
+  ```
+### 8) Open the app
 http://localhost
+
+## API Endpoints
+### Public
+GET /api/posts
+GET /api/posts/{id}
+## Auth
+POST /api/login
+POST /api/logout
+## Protected
+POST /api/posts
+PUT /api/posts/{id}
+DELETE /api/posts/{id}

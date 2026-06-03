@@ -1,4 +1,4 @@
-# Laravel Blog (Laravel Sail) — Auth + Posts CRUD
+# Laravel Blog — Auth + Posts CRUD
 
 ## Getting Started (First-time Setup)
 

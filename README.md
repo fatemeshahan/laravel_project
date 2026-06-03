@@ -1,24 +1,5 @@
 # Laravel Blog (Laravel Sail) — Auth + Posts CRUD
 
-A simple blog application built with **Laravel**, **Laravel Breeze** (Blade + Alpine), and containerized local development using **Laravel Sail** (Docker).
-
-## Tech Stack
-- Laravel (PHP)
-- Laravel Breeze (Blade + Alpine)
-- MySQL (via Docker / Sail)
-- Vite + Tailwind (frontend build)
-- Laravel Sail (Docker Compose wrapper)
-
----
-
-## Requirements
-- Docker Desktop (or Docker Engine + Docker Compose)
-- Git
-
-> You do **not** need to install PHP, Composer, MySQL, or Node locally if you use Sail.
-
----
-
 ## Getting Started (First-time Setup)
 
 ### 1) Clone the repository
